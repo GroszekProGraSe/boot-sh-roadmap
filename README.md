@@ -1,1 +1,1 @@
-# boot-sh-roadmap
+# boot.sh + Minimal Linux + AI
