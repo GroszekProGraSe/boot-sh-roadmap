@@ -1,4 +1,4 @@
-name: "💡 Nowy temat / pytanie"
+name: "lolctl.sh"
 description: Opisz, co chcesz zbudować, o co zapytać, albo co rozwinąć
 title: "[Temat] Krótki opis"
 labels: [pomysł, pytanie]
@@ -14,5 +14,31 @@ body:
   - type: textarea
     id: kontekst
     attributes:
-      label: Kontekst lub co już zrobiłeś
+      label: #!/bin/bash
+
+cmd="$1"
+arg="$2"
+
+case "$cmd" in
+  enable)
+    if [[ "$arg" == "gui" ]]; then
+      echo "Serio? Przecież jest zimno."
+    else
+      echo "$arg włączone. Powodzenia, mistrzu."
+    fi
+    ;;
+  disable)
+    echo "$arg wyłączone. Cisza jak makiem zasiał."
+    ;;
+  status)
+    echo "$arg działa... albo udaje. Sprawdź sam."
+    ;;
+  restart)
+    echo "$arg restartowany. Trzymaj kciuki."
+    ;;
+  *)
+    echo "Nie znam tej komendy. Wpisz lolctl help, chyba że jesteś odważny."
+    ;;
+esac
+
       description: Co już działa, a co nie? Dodaj kod, logi lub pomysły.
